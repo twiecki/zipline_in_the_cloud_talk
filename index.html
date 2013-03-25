@@ -1083,7 +1083,7 @@ p{margin-bottom:0;}
 */
 
 .reveal {
-  font-size: 24px;
+  font-size: 20px;
 }
 .reveal pre {
 width: 100%;
@@ -1207,11 +1207,11 @@ http://images.nationalgeographic.com/wpf/media-live/photos/000/212/cache/sugarlo
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1>About me</h1>
 <ul>
-<li>PhD student at Brown University.<ul>
+<li><a href="https://sites.google.com/a/brown.edu/lncc/home/members/thomas-wiecki">PhD student</a> at Brown University.<ul>
 <li>Computational Cognitive Neuroscience.</li>
 </ul>
 </li>
-<li>Quantitative Researcher at Quantopian.<ul>
+<li>Quantitative Researcher at <a href="http://www.quantopian.com">Quantopian</a>.<ul>
 <li>Optimizing trading algorithms.</li>
 </ul>
 </li>
@@ -1234,7 +1234,7 @@ http://images.nationalgeographic.com/wpf/media-live/photos/000/212/cache/sugarlo
 </section>
 <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2>Zipline http://zipline.io/</h2>
+<h2>Zipline <a href="http://zipline.io/">http://zipline.io/</a></h2>
 <ul>
 <li>Open-source backtester written in Python.</li>
 <li>Simulates real trading:<ul>
@@ -1248,7 +1248,7 @@ http://images.nationalgeographic.com/wpf/media-live/photos/000/212/cache/sugarlo
 </ul>
 </li>
 <li>Batteries included: moving average, alpha, beta, Sharpe ratio...</li>
-<li>Used in production on Quantopian.</li>
+<li>Used in production on <a href="http://www.quantopian.com">Quantopian</a>.</li>
 </ul>
 </div>
 </section>
@@ -2735,7 +2735,7 @@ AElFTkSuQmCC
 </div>
 <div class="fragment" class="text_cell_render border-box-sizing rendered_html">
 <p><img width=40% height=40% src='http://i.imgur.com/o38uyvS.png'/></p>
-<p>See https://speakerdeck.com/ogrisel/parallel-machine-learning-in-pythonm</p>
+<p>See <a href="https://speakerdeck.com/ogrisel/parallel-machine-learning-in-python">Olivier Grisel's talk</a></p>
 </div>
 </section>
 <section>
@@ -2799,7 +2799,7 @@ AElFTkSuQmCC
 </section>
 <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2>IPython Parallel</h2>
+<h2><a href="http://ipython.org/ipython-doc/dev/parallel/">IPython Parallel</a></h2>
 <p><img alt="" src="http://ipython.org/_static/IPy_header.png" /></p>
 <ul>
 <li>Multi-CPU, multi-host</li>
@@ -2910,6 +2910,7 @@ AElFTkSuQmCC
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><img src='http://star.mit.edu/cluster/docs/latest/_static/logo-small.png'/></p>
 <p><img src='http://star.mit.edu/cluster/docs/latest/_images/scoverview.png'/></p>
+<p><a href="http://star.mit.edu/cluster/">StarCluster homepage</a></p>
 </div>
 </section>
 <section>
@@ -4842,51 +4843,6 @@ L3/5i7h8+bKIj49XzJSxlupcv369SExMFBEREWLUqFFi1qxZ4uLFix6tMTMzU2g0GhEZGWk1jU1p
 </div>
 </div>
 </div>
-<div style=display:none class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
-<div class="input_area box-flex1">
-<div class="highlight"><pre><span class="n">eps</span><span class="p">,</span> <span class="n">days</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mgrid</span><span class="p">[</span><span class="mf">1.1</span><span class="p">:</span><span class="mi">40</span><span class="p">:</span><span class="mi">62j</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">40</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">param_space</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">eps</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">days</span><span class="o">.</span><span class="n">flatten</span><span class="p">()])</span><span class="o">.</span><span class="n">T</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-<div style=display:none class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
-<div class="input_area box-flex1">
-<div class="highlight"><pre><span class="n">q</span> <span class="o">=</span> <span class="n">queue_sc</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">run_olmar</span><span class="p">,</span> <span class="n">param_space</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-<div class="vbox output_wrapper">
-<div class="output vbox">
-<div class="hbox output_area">
-<div class="prompt output_prompt"></div>
-<div class="output_subarea output_pyerr">
-<pre><span class="ansicyan">  File </span><span class="ansigreen">&quot;&lt;ipython-input-19-042f615c5378&gt;&quot;</span><span class="ansicyan">, line </span><span class="ansigreen">1</span>
-<span class="ansiyellow">    q = queue_sc.map(run_olmar, param_space))</span>
-<span class="ansigrey">                                            ^</span>
-<span class="ansired">SyntaxError</span><span class="ansired">:</span> invalid syntax
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div style=display:none class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="input_area box-flex1">
-<div class="highlight"><pre><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">days</span><span class="p">,</span> <span class="n">q</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 </section>
 <section>
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -4899,7 +4855,7 @@ L3/5i7h8+bKIj49XzJSxlupcv369SExMFBEREWLUqFFi1qxZ4uLFix6tMTMzU2g0GhEZGWk1jU1p
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2>Walk-forward optimization</h2>
 <p><img width="40%" height="40%" src=http://blog.quantopian.com/wp-content/uploads/2012/07/iterative-img.png></p>
-<p>http://blog.quantopian.com/parameter-optimization/</p>
+<p><a href="http://blog.quantopian.com/parameter-optimization/">Blog post</a></p>
 </div>
 </section>
 <section>
@@ -4907,19 +4863,19 @@ L3/5i7h8+bKIj49XzJSxlupcv369SExMFBEREWLUqFFi1qxZ4uLFix6tMTMzU2g0GhEZGWk1jU1p
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2>Bayesian Optimization via Gaussian Processes.</h2>
 <p><img src='http://i.imgur.com/lOVwOp1.png'/></p>
-<p>See Snoek, J., Larochelle, H., &amp; Adams, R. P. (2012). Practical Bayesian Optimization of Machine Learning Algorithms, 1–12. Machine Learning; Learning. Retrieved from http://arxiv.org/abs/1206.2944</p>
+<p>See Snoek, J., Larochelle, H., &amp; Adams, R. P. (2012). Practical Bayesian Optimization of Machine Learning Algorithms, 1–12. Machine Learning; Learning. Retrieved from <a href="http://arxiv.org/abs/1206.2944">http://arxiv.org/abs/1206.2944</a></p>
 </div>
 </section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2>Also supports parallel optimization</h2>
 <p><img src="http://i.imgur.com/H24eKNd.png"/></p>
-<p>Open-source implementation: https://github.com/JasperSnoek/spearmint</p>
+<p><a href="https://github.com/JasperSnoek/spearmint">Open-source implementation</a></p>
 </div>
 </section>
 </section>
 <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2>HyperOpt package</h2>
+<h2><a href="http://jaberg.github.com/hyperopt/">HyperOpt package</a></h2>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
@@ -4936,9 +4892,6 @@ L3/5i7h8+bKIj49XzJSxlupcv369SExMFBEREWLUqFFi1qxZ4uLFix6tMTMzU2g0GhEZGWk1jU1p
 
 </div>
 </div>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>http://jaberg.github.com/hyperopt/</p>
 </div>
 </section>
 <section>
@@ -4970,7 +4923,7 @@ L3/5i7h8+bKIj49XzJSxlupcv369SExMFBEREWLUqFFi1qxZ4uLFix6tMTMzU2g0GhEZGWk1jU1p
 <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1>IPython slideshow powered by nbconvert</h1>
-<p>Tutorial: http://www.slideviper.oquanta.info/tutorial/slideshow_tutorial_slides.html#/</p>
+<p><a href="http://www.slideviper.oquanta.info/tutorial/slideshow_tutorial_slides.html#/">Tutorial</a></p>
 <p>Thanks to Damián Avila for helpful comments.</p>
 </div>
 </section>
